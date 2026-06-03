@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Manager</title>
+</head>
+<body>
+
+    <h1>Student Manager</h1>
+    <p>Open the browser console to view student details and averages.</p>
+
+    <script>
+        // Array of student objects
+        const students = [
+            {
+                name: "Rahul",
+                marks: [85, 90, 78]
+            },
+            {
+                name: "Priya",
+                marks: [92, 88, 95]
+            },
+            {
+                name: "Amit",
+                marks: [75, 80, 70]
+            }
+        ];
+
+        // Calculate and display averages
+        students.forEach(student => {
+            let total = student.marks.reduce((sum, mark) => sum + mark, 0);
+            let average = total / student.marks.length;
+
+            console.log("Student:", student.name);
+            console.log("Marks:", student.marks);
+            console.log("Average:", average.toFixed(2));
+            console.log("-------------------");
+        });
+    </script>
+
+</body>
+</html>

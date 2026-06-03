@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Hero Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding: 50px 10%;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-right: 30px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: white;
+            color: #0077cc;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #e6e6e6;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Mobile Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 5%;
+            }
+
+            .hero-content {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Website</h1>
+            <p>
+                Explore my projects, skills, and achievements.
+                This responsive hero section is built using Flexbox
+                and adapts beautifully to mobile devices.
+            </p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="s 7.23.22 PM.jpg" alt="Hero Image">
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mood Tracker</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    function App() {
+      const [mood, setMood] = React.useState("😊 Happy");
+
+      return (
+        <div style={{ textAlign: "center", marginTop: "50px" }}>
+          <h1>Mood Tracker</h1>
+          <h2>Current Mood: {mood}</h2>
+
+          <button onClick={() => setMood("😊 Happy")}>Happy</button>
+          <button onClick={() => setMood("😢 Sad")}>Sad</button>
+          <button onClick={() => setMood("😎 Excited")}>Excited</button>
+          <button onClick={() => setMood("😴 Tired")}>Tired</button>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>
